@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": {
+    "install-deps": {
+      "name": "Install Dependencies",
+      "command": "npm run install-all",
+      "runAt": "onCommand"
+    },
+    "start-backend": {
+      "name": "Start Backend Server",
+      "command": "npm run server",
+      "runAt": "onCommand",
+      "isBackground": true
+    },
+    "start-frontend": {
+      "name": "Start Frontend",
+      "command": "npm run client",
+      "runAt": "onCommand",
+      "isBackground": true
+    },
+    "start-both": {
+      "name": "Start Both (Frontend + Backend)",
+      "command": "npm run dev",
+      "runAt": "onCommand",
+      "isBackground": true
+    }
+  }
+}

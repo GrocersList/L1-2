@@ -1,0 +1,12 @@
+{
+  "template": "node",
+  "container": {
+    "node": "18"
+  },
+  "tasks": {
+    "install": "npm run install-all",
+    "start-backend": "npm run server",
+    "start-frontend": "npm run client",
+    "dev": "npm run dev"
+  }
+}

@@ -7,8 +7,13 @@ const PORT = process.env.PORT || 3001;
 // Body parser middleware
 app.use(express.json());
 
-// CORS configuration
-app.use(cors());
+// CORS configuration for CodeSandbox
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 
 // Mock database with intentional bugs
 let todos = [
@@ -93,6 +98,7 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📝 Todo API: http://localhost:${PORT}/api/todos`);
   console.log(`🔍 Health check: http://localhost:${PORT}/health`);
+  console.log(`🌐 Frontend proxy: http://localhost:3000`);
 });
 
 module.exports = app;
