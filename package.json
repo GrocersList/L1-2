@@ -1,0 +1,31 @@
+{
+  "name": "todo-bug-challenge",
+  "version": "1.0.0",
+  "description": "30-minute code challenge: Fix bugs in a Todo app",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "code-challenge",
+    "todo",
+    "bugs",
+    "react",
+    "express"
+  ],
+  "author": "Code Challenge Team",
+  "license": "MIT"
+}
